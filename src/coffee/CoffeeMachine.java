@@ -4,17 +4,11 @@ public class CoffeeMachine {
     private Integer cups = 0;
 
     private Boolean pay(Integer banknoteNominal) {
-        if (banknoteNominal == 5 || banknoteNominal == 10) {
-            return true;
-        }
-        return false;
+        return banknoteNominal == 5 || banknoteNominal == 10;
     }
 
     private Boolean enoughComponents() {
-        if (this.cups > 0) {
-            return true;
-        }
-        return false;
+        return this.cups > 0;
     }
 
     private String choose(Integer option) {
@@ -39,7 +33,7 @@ public class CoffeeMachine {
     }
 
     public void prepare() {
-        String coffeeType = "";
+        String coffeeType;
         this.showInfo("Please insert banknote");
         if (this.pay(5)) {
             this.showInfo("Please chose option");
