@@ -1,20 +1,27 @@
 package coffee;
 
 public class CoffeeMachine {
-    private Integer cups = 0;
+    private Integer cups = 10;
+    public Integer sugar = 500;
+    public Integer milk = 500;
+    public Integer cofe = 200;
 
     private Boolean pay(Integer banknoteNominal) {
         return banknoteNominal == 5 || banknoteNominal == 10;
     }
 
     private Boolean enoughComponents() {
-        return this.cups > 0;
+        return (this.cups > 0 && this.cofe > 0);
     }
 
     private String choose(Integer option) {
         if (option == 1) {
+            cofe = -1;
             return "Coffee";
         } else if (option == 2) {
+            sugar = -3;
+            milk = -3;
+            cofe = -1;
             return "Cappuccino";
         }
         return "Incorrect option";
