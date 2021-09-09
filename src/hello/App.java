@@ -1,6 +1,6 @@
 package hello;
 
-public class App {
+public class APP {
     public static void main(String[] args) {
         Transport transport = new Transport();
         Transport t2 = new Transport("Bus");
@@ -21,5 +21,19 @@ public class App {
         redBlueBus.paint("red", "blue");
         System.out.println("Red Blue Bus body color is: " + redBlueBus.getBodyColor());
         System.out.println("Red Blue Bus wheel color is: " + redBlueBus.getWheelColor());
+
+
+        Transport[] transports = {
+                new Bus(),
+                new Bus(),
+                new Train(),
+                new Bus()
+        };
+
+        for(Transport t: transports){
+            //here we have polymorphism principle
+            t.run();
+        }
+
     }
 }

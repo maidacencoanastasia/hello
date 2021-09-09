@@ -4,40 +4,39 @@ public class Transport {
     protected String name;
     private String bodyColor = "white";
     private String wheelColor = "black";
-
-    Transport() {
+    Transport(){
         this.name = "Noname";
     }
 
-    Transport(String name) {
+    Transport(String name){
         this.name = name;
     }
 
-    String getName() {
+    String getName(){
         return this.name;
     }
 
-    void setName(String name) {
+    void setName(String name){
         this.name = name;
     }
 
-    String getBodyColor() {
+    String getBodyColor(){
         return this.bodyColor;
     }
 
-    String getWheelColor() {
+    String getWheelColor(){
         return this.wheelColor;
     }
 
-    void run() {
+    void run(){
         System.out.println(this.name + " move on UNDEFINED");
     }
 
-    void paint(String bodyColor) {
+    void paint(String bodyColor){
         this.bodyColor = bodyColor;
     }
 
-    void paint(String bodyColor, String wheelColor) {
+    void paint(String bodyColor, String wheelColor){
         this.bodyColor = bodyColor;
         this.wheelColor = wheelColor;
     }
